@@ -1,3 +1,3 @@
 # Risky-Business
 
-This project shows the different types of political violence risks that can be expected in the emergeing world based on local news sites.
+This project shows the different types of political violence risks that can be expected in the emerging world based on local news headlines.
