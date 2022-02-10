@@ -1,0 +1,196 @@
+---
+title: "Risky Business"
+author: "Jack Carter"
+date: "2/8/2022"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(dplyr)
+library(jsonlite)
+library(knitr)
+library(ggplot2)
+library(ggthemes)
+
+# reads in the risk headlines. 
+data <- read_csv("C:\\Users\\HUAWEI\\Desktop\\Projects\\Risky-Business\\Data\\risk_headlines.csv") %>%
+  filter(
+    Collected >= 20220207
+  )
+
+# gets the z score for a specific set of data points.  
+get_z_score <- function(data) {
+  mean <- mean(
+    data
+  )
+  sigma <- sd(
+    data
+  )
+  z_scores <- list()
+  for(i in 1:length(data)) {
+    z_scores[i] <- (data[i] - mean) / sigma
+  }
+  return(unlist(
+    z_scores
+  ))
+}
+
+# get the z-scores for each category of a single continent. 
+get_continent_z_scores <- function(continent) {
+  data <- data[data["Continent"]==continent,]
+  count <- data %>%
+    group_by(
+      Category
+    ) %>%
+    count()
+  z_scores <- tibble(
+    z_score = get_z_score(count$n)
+  )
+  final_data <- count[,1] %>%
+    cbind(
+      z_scores
+    ) %>%
+    mutate(
+      Continent = continent
+    )
+  return(final_data)
+}
+
+# gets the z-scores for each category by continent.  
+z_scores <- rbind_pages(
+  lapply(
+    unique(data$Continent), get_continent_z_scores
+  )
+)
+
+# my personal plot theme for data visualizations. 
+my_theme <- theme_economist_white(
+  gray_bg = FALSE
+) +
+  theme(plot.title = element_text(
+    hjust = 0.5, 
+    vjust = 13, 
+    size = 9, 
+    color = "#474747"
+  ),
+  plot.margin = unit(
+    c(1.5, 1, 1.5, 1), "cm"
+  ),
+  axis.text = element_text(
+    size = 9, 
+    color = "gray30"
+  ),
+  axis.text.x=element_text(
+    vjust = -2.5
+  ),
+  axis.title.x = element_text(
+    size = 9, 
+    color = "gray30", 
+    vjust = -10
+  ),
+  axis.title.y = element_text(
+    size = 9, 
+    color = "gray30", 
+    vjust = 10
+  ),
+  legend.direction = "vertical", 
+  legend.position = "right",
+  legend.title = element_blank(),
+  legend.text = element_text(
+    size = 12, 
+    color = "gray20"
+  ),
+  legend.margin=margin(
+    1, -15, 1, 0
+  ),
+  legend.spacing.x = unit(
+    0.25, "cm"
+  ),
+  legend.key.size = unit(
+    1, "cm"
+  ), 
+  legend.key.height = unit(
+    0.75, "cm"
+  ),
+  strip.text = element_text(
+    hjust = 0.5, 
+    vjust = 1, 
+    size = 10, 
+    color = "#474747"
+  ),
+  panel.spacing = unit(
+    2, "lines")
+  )
+
+```
+
+## **Summary**
+
+This project uses web scraping, regex and a scoring mechanism to identify the different kinds of political violence risks that occur in the emerging world, as well as how their prevalence differs by continent and region.
+
+&nbsp;
+
+## **Method**
+
+**1) Scraping:**
+
+The websites of over 250 local newspapers in emerging regions are scraped three times a week, beginning February 7 2022. 
+
+**2) Regex:**
+
+A series of regex strings, including keywords, actor/action combinations and hyperbolic situation scenarios, are used to create multiple word banks.
+
+**3) Scoring Mechanism:**
+
+The word banks are used to score and label the headlines as one of 5 kinds of political violence risks. 
+
+**4) Z-scores:**
+
+The relative distribution of risks is then compared using a standardized score according to the relevant continent or region. 
+
+&nbsp;
+
+## Results
+
+### **1) Overview:**
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE, dpi=600}
+
+# overview. 
+overall_data <- data %>%
+  group_by(Category, Continent) %>%
+  count()
+
+overall_data %>%
+  ggplot(
+    aes(x=Continent, y=n, fill=Category)
+  ) +
+  geom_bar(
+    stat = "identity", position = "fill"
+  ) +
+  ggtitle(
+    "Risks by Continent"
+  ) +
+  ylab(
+    "Relative Distribution"
+  ) +
+  xlab(
+    ""
+  ) + 
+  my_theme +
+  theme(
+    axis.text.y=element_blank()
+  ) +
+  scale_fill_discrete(
+    name = "Risks", labels = c("Military Conflict", 
+                               "Organized Crime", 
+                               "Regime Instability",
+                               "Social Unrest",
+                               "Terrorism")
+    ) +
+  scale_x_discrete(
+    guide = guide_axis(n.dodge=2)
+    )
+```
