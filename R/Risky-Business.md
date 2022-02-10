@@ -28,7 +28,7 @@ banks.
 **3) Scoring Mechanism:**
 
 The word banks are used to score and label the headlines as one of 5
-different political violence risks.
+kinds of political violence risks.
 
 **4) Z-scores:**
 
