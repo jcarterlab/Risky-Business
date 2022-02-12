@@ -20,6 +20,16 @@ data <- read_csv("C:\\Users\\HUAWEI\\Desktop\\Projects\\Risky-Business\\Data\\ri
     Collected >= 20220207
   )
 
+# regional data. 
+regional_data <- data %>%
+  group_by(Category, Continent, Region) %>%
+  count()
+
+# continent.  
+continent_data <- data %>%
+  group_by(Category, Continent) %>%
+  count()
+
 # gets the z score for a specific set of data points.  
 get_z_score <- function(data) {
   mean <- mean(
@@ -128,7 +138,7 @@ my_theme <- theme_economist_white(
 
 ## **Summary**
 
-This project uses web scraping, regex and a scoring mechanism to identify the different kinds of political violence risks that occur in the emerging world, as well as how their prevalence differs by continent and region.
+This project uses web scraping, regex combinations and a labeling mechanism to identify political violence risks in the emerging world, as well as how their prevalence differs by continent and region. It uses `r nrow(data)` headlines from `r length(unique(data$Name))` local online newspapers.
 
 &nbsp;
 
@@ -136,19 +146,15 @@ This project uses web scraping, regex and a scoring mechanism to identify the di
 
 **1) Scraping:**
 
-The websites of over 250 local newspapers in emerging regions are scraped three times a week, beginning February 7 2022. 
+A database of local newspapers in the emerging world is scraped three times a week, beginning February 7 2022. 
 
 **2) Regex:**
 
-A series of regex strings, including keywords, actor/action combinations and hyperbolic situation scenarios, are used to create multiple word banks.
+Regex strings (including keywords, actor/action combinations and hyperbolic situations) are used to create a series word banks.
 
-**3) Scoring Mechanism:**
+**3) Labeling Mechanism:**
 
-The word banks are used to score and label the headlines as one of 5 kinds of political violence risks. 
-
-**4) Z-scores:**
-
-The relative distribution of risks is then compared using a standardized score according to the relevant continent or region. 
+The word banks are used to label headlines according to 5 political violence risks. They are then manually checked/adjusted for accuracy. 
 
 &nbsp;
 
@@ -158,12 +164,8 @@ The relative distribution of risks is then compared using a standardized score a
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, dpi=600}
 
-# overview. 
-overall_data <- data %>%
-  group_by(Category, Continent) %>%
-  count()
-
-overall_data %>%
+# continent plot. 
+continent_data %>%
   ggplot(
     aes(x=Continent, y=n, fill=Category)
   ) +
@@ -193,4 +195,179 @@ overall_data %>%
   scale_x_discrete(
     guide = guide_axis(n.dodge=2)
     )
+```
+
+&nbsp;
+
+### **2) Regional Analysis:**
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE, dpi=600}
+
+# Africa plot. 
+regional_data %>%
+  filter(Continent == "Africa") %>%
+  ggplot(
+    aes(x=Region, y=n, fill=Category)
+  ) +
+  geom_bar(
+    stat = "identity", position = "fill"
+  ) +
+  ggtitle(
+    "Africa"
+  ) +
+  ylab(
+    "Relative Frequency"
+  ) +
+  xlab(
+    ""
+  ) + 
+  my_theme +
+  theme(
+    axis.text.y=element_blank()
+  ) +
+  scale_fill_discrete(
+    name = "Risks", labels = c("Military Conflict", 
+                               "Organized Crime", 
+                               "Regime Instability",
+                               "Social Unrest",
+                               "Terrorism")
+  )
+
+```
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE, dpi=600}
+
+# Asia plot. 
+regional_data %>%
+  filter(Continent == "Asia") %>%
+  ggplot(
+    aes(x=Region, y=n, fill=Category)
+  ) +
+  geom_bar(
+    stat = "identity", position = "fill"
+  ) +
+  ggtitle(
+    "Asia"
+  ) +
+  ylab(
+    "Relative Frequency"
+  ) +
+  xlab(
+    ""
+  ) + 
+  my_theme +
+  theme(
+    axis.text.y=element_blank()
+  ) +
+  scale_fill_discrete(
+    name = "Risks", labels = c("Military Conflict", 
+                               "Organized Crime", 
+                               "Regime Instability",
+                               "Social Unrest",
+                               "Terrorism")
+  )
+
+```
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE, dpi=600}
+
+# Europe plot. 
+regional_data %>%
+  filter(Continent == "Europe") %>%
+  ggplot(
+    aes(x=Region, y=n, fill=Category)
+  ) +
+  geom_bar(
+    stat = "identity", position = "fill"
+  ) +
+  ggtitle(
+    "Europe"
+  ) +
+  ylab(
+    "Relative Frequency"
+  ) +
+  xlab(
+    ""
+  ) + 
+  my_theme +
+  theme(
+    axis.text.y=element_blank()
+  ) +
+  scale_fill_discrete(
+    name = "Risks", labels = c("Military Conflict", 
+                               "Organized Crime", 
+                               "Regime Instability",
+                               "Social Unrest",
+                               "Terrorism")
+  )
+
+```
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE, dpi=600}
+
+# Latin America plot. 
+regional_data %>%
+  filter(Continent == "Latin America") %>%
+  ggplot(
+    aes(x=Region, y=n, fill=Category)
+  ) +
+  geom_bar(
+    stat = "identity", position = "fill"
+  ) +
+  ggtitle(
+    "Latin America"
+  ) +
+  ylab(
+    "Relative Frequency"
+  ) +
+  xlab(
+    ""
+  ) + 
+  my_theme +
+  theme(
+    axis.text.y=element_blank()
+  ) +
+  scale_fill_discrete(
+    name = "Risks", labels = c("Military Conflict", 
+                               "Organized Crime", 
+                               "Regime Instability",
+                               "Social Unrest",
+                               "Terrorism")
+  )
+
+```
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE, dpi=600}
+
+# MENA plot. 
+regional_data %>%
+  filter(Continent == "MENA") %>%
+  ggplot(
+    aes(x=Region, y=n, fill=Category)
+  ) +
+  geom_bar(
+    stat = "identity", position = "fill"
+  ) +
+  ggtitle(
+    "MENA"
+  ) +
+  ylab(
+    "Relative Frequency"
+  ) +
+  xlab(
+    ""
+  ) + 
+  my_theme +
+  theme(
+    axis.text.y=element_blank()
+  ) +
+  scale_fill_discrete(
+    name = "Risks", labels = c("Military Conflict", 
+                               "Organized Crime", 
+                               "Regime Instability",
+                               "Social Unrest",
+                               "Terrorism")
+  )
+
+
 ```

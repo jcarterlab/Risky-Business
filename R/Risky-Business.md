@@ -5,10 +5,10 @@ Jack Carter
 
 ## **Summary**
 
-This project uses web scraping, regex and a scoring mechanism to
-identify the different kinds of political violence risks that occur in
-the emerging world, as well as how their prevalence differs by continent
-and region.
+This project uses web scraping, regex combinations and a labeling
+mechanism to identify political violence risks in the emerging world, as
+well as how their prevalence differs by continent and region. It uses 91
+headlines from 47 local online newspapers.
 
  
 
@@ -16,24 +16,18 @@ and region.
 
 **1) Scraping:**
 
-The websites of over 250 local newspapers in emerging regions are
-scraped three times a week, beginning February 7 2022.
+A database of local newspapers in the emerging world is scraped three
+times a week, beginning February 7 2022.
 
 **2) Regex:**
 
-A series of regex strings, including keywords, actor/action combinations
-and hyperbolic situation scenarios, are used to create multiple word
-banks.
+Regex strings (including keywords, actor/action combinations and
+hyperbolic situations) are used to create a series word banks.
 
-**3) Scoring Mechanism:**
+**3) Labeling Mechanism:**
 
-The word banks are used to score and label the headlines as one of 5
-kinds of political violence risks.
-
-**4) Z-scores:**
-
-The relative distribution of risks is then compared using a standardized
-score according to the relevant continent or region.
+The word banks are used to label headlines according to 5 political
+violence risks. They are then manually checked/adjusted for accuracy.
 
  
 
@@ -42,3 +36,17 @@ score according to the relevant continent or region.
 ### **1) Overview:**
 
 ![](Risky-Business_files/figure-gfm/unnamed-chunk-1-1.png)<!-- -->
+
+ 
+
+### **2) Regional Analysis:**
+
+![](Risky-Business_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
+
+![](Risky-Business_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
+
+![](Risky-Business_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
+
+![](Risky-Business_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
+
+![](Risky-Business_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
