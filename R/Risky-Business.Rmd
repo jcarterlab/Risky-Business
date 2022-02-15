@@ -138,7 +138,7 @@ my_theme <- theme_economist_white(
 
 ## **Summary**
 
-This project uses web scraping, regex combinations and a labeling mechanism to identify political violence risks in the emerging world, as well as how their prevalence differs by continent and region. It uses `r nrow(data)` headlines from `r length(unique(data$Name))` local online newspapers.
+This project uses web scraping, regex combinations and a labeling mechanism to identify political violence risks in the emerging world, as well as how their prevalence differs by continent and region. It uses `r nrow(data)` headlines from `r length(unique(data$Name))` different local newspapers.
 
 &nbsp;
 
@@ -152,7 +152,7 @@ A database of local newspapers in the emerging world is scraped three times a we
 
 Regex strings (including keywords, actor/action combinations and hyperbolic situations) are used to create a series word banks.
 
-**3) Labeling Mechanism:**
+**3) Labeling:**
 
 The word banks are used to label headlines according to 5 political violence risks. They are then manually checked/adjusted for accuracy. 
 
@@ -216,7 +216,7 @@ regional_data %>%
     "Africa"
   ) +
   ylab(
-    "Relative Frequency"
+    "Relative Distribution"
   ) +
   xlab(
     ""
@@ -250,7 +250,7 @@ regional_data %>%
     "Asia"
   ) +
   ylab(
-    "Relative Frequency"
+    "Relative Distribution"
   ) +
   xlab(
     ""
@@ -284,7 +284,7 @@ regional_data %>%
     "Europe"
   ) +
   ylab(
-    "Relative Frequency"
+    "Relative Distribution"
   ) +
   xlab(
     ""
@@ -318,7 +318,7 @@ regional_data %>%
     "Latin America"
   ) +
   ylab(
-    "Relative Frequency"
+    "Relative Distribution"
   ) +
   xlab(
     ""
@@ -352,7 +352,7 @@ regional_data %>%
     "MENA"
   ) +
   ylab(
-    "Relative Frequency"
+    "Relative Distribution"
   ) +
   xlab(
     ""

@@ -7,8 +7,8 @@ Jack Carter
 
 This project uses web scraping, regex combinations and a labeling
 mechanism to identify political violence risks in the emerging world, as
-well as how their prevalence differs by continent and region. It uses 91
-headlines from 47 local online newspapers.
+well as how their prevalence differs by continent and region. It uses
+126 headlines from 60 different local newspapers.
 
  
 
@@ -24,7 +24,7 @@ times a week, beginning February 7 2022.
 Regex strings (including keywords, actor/action combinations and
 hyperbolic situations) are used to create a series word banks.
 
-**3) Labeling Mechanism:**
+**3) Labeling:**
 
 The word banks are used to label headlines according to 5 political
 violence risks. They are then manually checked/adjusted for accuracy.
