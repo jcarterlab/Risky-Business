@@ -22,7 +22,7 @@ times a week, beginning February 7 2022.
 **2) Regex:**
 
 Regex strings (including keywords, actor/action combinations and
-hyperbolic situations) are used to create a series word banks.
+hyperbolic situations) are used to create a series of word banks.
 
 **3) Labeling:**
 
