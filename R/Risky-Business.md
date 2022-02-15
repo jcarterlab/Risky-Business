@@ -26,8 +26,8 @@ hyperbolic situations) are used to create a series of word banks.
 
 **3) Labeling:**
 
-The word banks are used to label headlines according to 5 political
-violence risks. They are then manually checked/adjusted for accuracy.
+The word banks are then used to label headlines according to 5 political
+violence risks before being manually checked/adjusted for accuracy.
 
  
 
