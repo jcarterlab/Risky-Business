@@ -138,7 +138,7 @@ my_theme <- theme_economist_white(
 
 ## **Summary**
 
-This project uses web scraping, regex combinations and a labeling mechanism to identify political violence risks in the emerging world, as well as how their prevalence differs by continent and region. It uses `r nrow(data)` headlines from `r length(unique(data$Name))` different local newspapers.
+This project uses web scraping, regex combinations and a labeling mechanism to identify how the prevalence of political violence risks differs by continent and region in the emerging world. It uses `r nrow(data)` risk headlines from `r length(unique(data$Name))` unique online newspapers.
 
 &nbsp;
 
@@ -146,15 +146,15 @@ This project uses web scraping, regex combinations and a labeling mechanism to i
 
 **1) Scraping:**
 
-A database of local newspapers in the emerging world is scraped three times a week, beginning February 7 2022. 
+A database of over 250 local newspapers in the emerging world is scraped three times a week, beginning 7 February 2022. 
 
 **2) Regex:**
 
-Regex strings (including keywords, actor/action combinations and hyperbolic situations) are used to create a series word banks.
+A sereis of regex strings (including keywords, actor/action combinations and hyperbolic situations) are used to create five political violence (PV) word banks.
 
 **3) Labeling:**
 
-The word banks are used to label headlines according to 5 political violence risks. They are then manually checked/adjusted for accuracy. 
+These word banks are then used to label the headlines according to five PV risks, including military conflict, organized crime, regime instability, social unrest and terrorism.
 
 &nbsp;
 
@@ -199,7 +199,7 @@ continent_data %>%
 
 &nbsp;
 
-### **2) Regional Analysis:**
+### **2) Regional Focus:**
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, dpi=600}
 

@@ -6,9 +6,9 @@ Jack Carter
 ## **Summary**
 
 This project uses web scraping, regex combinations and a labeling
-mechanism to identify political violence risks in the emerging world, as
-well as how their prevalence differs by continent and region. It uses
-126 headlines from 60 different local newspapers.
+mechanism to identify how the prevalence of political violence risks
+differs by continent and region in the emerging world. It uses 193 risk
+headlines from 76 unique online newspapers.
 
  
 
@@ -16,18 +16,20 @@ well as how their prevalence differs by continent and region. It uses
 
 **1) Scraping:**
 
-A database of local newspapers in the emerging world is scraped three
-times a week, beginning February 7 2022.
+A database of over 250 local newspapers in the emerging world is scraped
+three times a week, beginning 7 February 2022.
 
 **2) Regex:**
 
-Regex strings (including keywords, actor/action combinations and
-hyperbolic situations) are used to create a series of word banks.
+A sereis of regex strings (including keywords, actor/action combinations
+and hyperbolic situations) are used to create five political violence
+(PV) word banks.
 
 **3) Labeling:**
 
-The word banks are then used to label headlines according to 5 political
-violence risks before being manually checked/adjusted for accuracy.
+These word banks are then used to label the headlines according to five
+PV risks, including military conflict, organized crime, regime
+instability, social unrest and terrorism.
 
  
 
@@ -39,7 +41,7 @@ violence risks before being manually checked/adjusted for accuracy.
 
  
 
-### **2) Regional Analysis:**
+### **2) Regional Focus:**
 
 ![](Risky-Business_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
 
