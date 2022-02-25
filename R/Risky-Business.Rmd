@@ -1,7 +1,7 @@
 ---
 title: "Risky Business"
 author: "Jack Carter"
-date: "2/8/2022"
+date: "2/21/2022"
 output: github_document
 ---
 
@@ -138,7 +138,7 @@ my_theme <- theme_economist_white(
 
 ## **Summary**
 
-This project uses web scraping, regex combinations and a labeling mechanism to identify how the prevalence of political violence risks differs by continent and region in the emerging world. It uses `r nrow(data)` risk headlines from `r length(unique(data$Name))` unique online newspapers.
+This project uses web scraping, regex combinations and a labeling mechanism to identify how the prevalence of political violence risks differs by continent and region in the emerging world. It uses `r nrow(data)` risk headlines from `r length(unique(data$Name))` different newspapers.
 
 &nbsp;
 

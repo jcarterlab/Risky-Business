@@ -1,14 +1,14 @@
 Risky Business
 ================
 Jack Carter
-2/8/2022
+2/21/2022
 
 ## **Summary**
 
 This project uses web scraping, regex combinations and a labeling
 mechanism to identify how the prevalence of political violence risks
-differs by continent and region in the emerging world. It uses 193 risk
-headlines from 76 unique online newspapers.
+differs by continent and region in the emerging world. It uses 298 risk
+headlines from 95 different newspapers.
 
  
 
