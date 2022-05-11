@@ -1,6 +1,8 @@
 # Risky-Business
 
-Illustrates the different kinds of political violence risks present in the emerging world based on local news media headlines. 
+Illustrates the different kinds of violence risks in prevalent emerging economies based on scraped local news headlines.
+
+<br/>
 
 The report can be found [here.](R/Risky-Business.md)
 
