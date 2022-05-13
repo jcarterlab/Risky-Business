@@ -7,8 +7,7 @@ Jack Carter
 
 This project uses web scraping, regex and a labeling mechanism to
 uncover the relative prevelance of different violence risks in the
-emerging world. The results include 822 risk headlines from 140
-different news sources. Just as Tom Cruise discovered in Risky Business,
+emerging world. The results include 822 risk headlines from 140 news sources. Just as Tom Cruise realized in Risky Business,
 those seeking to venture into the unknown could find things get out of
 hand quickly if they’re not careful.
 
