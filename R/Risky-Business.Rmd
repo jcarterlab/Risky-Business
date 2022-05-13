@@ -129,9 +129,10 @@ The data above show only the relative distribution of headlines for each region,
 
 ## **Method**
 
-### **1) Assemble Sites:**
+### **1) Assemble Links Database:**
 
-A database of over 250 online newspapers in the emerging world is assembled.  
+A database containing over 250 online newspapers in the emerging world is
+assembled.
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, dpi=600}
 
