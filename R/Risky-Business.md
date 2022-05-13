@@ -6,11 +6,10 @@ Jack Carter
 ## **Summary**
 
 This project uses web scraping, regex and a labeling mechanism to
-uncover the relative prevelance of different violence risks in the
+uncover the relative distribution of different violence risks in the
 emerging world. The results include 822 risk headlines from 140 news sources. Just as Tom Cruise realized in Risky Business,
 those seeking to venture into the unknown could find things get out of
 hand quickly if they’re not careful.
-
  
 
 ## Results
@@ -35,9 +34,9 @@ such regions, not how dangerous they are overall.
 
 ## **Method**
 
-### **1) Assemble Sites:**
+### **1) Assemble Links Database:**
 
-A database of over 250 online newspapers in the emerging world is
+A database containing over 250 online newspapers in the emerging world is
 assembled.
 
 | Africa | Asia | Europe | Latin America | MENA |
