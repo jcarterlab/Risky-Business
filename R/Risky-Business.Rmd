@@ -85,8 +85,8 @@ my_theme <- theme_economist_white(gray_bg = FALSE) +
 ## **Summary**
 
 This project uses web scraping, regex and a labeling mechanism to
-uncover the relative prevelance of different violence risks in the
-emerging world. The results include 822 risk headlines from 140 news sources. Just as Tom Cruise realized in Risky Business,
+uncover the relative distribution of different violence risks in the
+emerging world. The results include 822 risk headlines from 140 news sources. Just as Tom Cruise discovered in Risky Business,
 those seeking to venture into the unknown could find things get out of
 hand quickly if they’re not careful.
 
@@ -94,7 +94,7 @@ hand quickly if they’re not careful.
 
 ## Results
 
-The results show a strong risk of military conflict in Europe due to the Ukraine crisis and a high risk of internal conflict, such as social unrest and organized crime, in regions with weak states like Africa and Latin America. 
+The results show a strong risk of military conflict in Europe due to the Ukraine crisis and a high risk of internal conflict, such as organized crime, social unrest and terrorism, in regions with weak states like Africa and Latin America. 
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE, dpi=600}
 

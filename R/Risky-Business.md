@@ -7,17 +7,19 @@ Jack Carter
 
 This project uses web scraping, regex and a labeling mechanism to
 uncover the relative distribution of different violence risks in the
-emerging world. The results include 822 risk headlines from 140 news sources. Just as Tom Cruise realized in Risky Business,
-those seeking to venture into the unknown could find things get out of
-hand quickly if they’re not careful.
+emerging world. The results include 822 risk headlines from 140 news
+sources. Just as Tom Cruise discovered in Risky Business, those seeking
+to venture into the unknown could find things get out of hand quickly if
+they’re not careful.
+
  
 
 ## Results
 
 The results show a strong risk of military conflict in Europe due to the
-Ukraine crisis and a high risk of internal conflict, such as social
-unrest and organized crime, in regions with weak states like Africa and
-Latin America.
+Ukraine crisis and a high risk of internal conflict, such as organized
+crime, social unrest and terrorism, in regions with weak states like
+Africa and Latin America.
 
 ![](Risky-Business_files/figure-gfm/unnamed-chunk-1-1.png)<!-- -->
 
@@ -36,8 +38,8 @@ such regions, not how dangerous they are overall.
 
 ### **1) Assemble Links Database:**
 
-A database containing over 250 online newspapers in the emerging world is
-assembled.
+A database containing over 250 online newspapers in the emerging world
+is assembled.
 
 | Africa | Asia | Europe | Latin America | MENA |
 | -----: | ---: | -----: | ------------: | ---: |
