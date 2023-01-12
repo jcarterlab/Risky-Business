@@ -1,0 +1,19 @@
+Site,Name,Country,Region,Continent,Language,Problem,Details,Tag
+https://alsabaah.iq/%D8%A7%D9%84%D8%B9%D8%B1%D8%A7%D9%82/%D8%A7%D8%AE%D8%A8%D8%A7%D8%B1-%D8%A7%D9%84%D8%B9%D8%B1%D8%A7%D9%82,Al Sabaah,Iraq,Middle East,MENA,Arabic,Yes,Won't load - maybe visited too many time in 1 day.,-
+https://www.soma-digest.com,Soma Digest,Iraq,Middle East,MENA,English,Yes,Can't connect - maybe banned in Turkey by Turkish gov.,-
+https://www.awene.com/iraq,Awena,Iraq,Middle East,MENA,Kurdish,Yes,No headers to scrape - only href links.,a.text
+https://xebat.net/ku/category/%d9%83%d9%88%d8%b1%d8%af%d8%b3%d8%aa%d8%a7%d9%86%db%8c/,Xebat,Iraq,Middle East,MENA,Kurdish,Yes,Can't read arabic script links.,h2
+https://www.azzaman.com/category/iraqiedition/,Azzaman,Iraq,Middle East,MENA,Arabic,Yes,HTTP error 503.,h3
+https://www.altaakhipress.com/viewpage.php?id=4,Attaakhi,Iraq,Middle East,MENA,Arabic,Yes,Headlines are written using <b> html tag.,b
+https://aliraqnews.com/category/%d9%85%d8%aa%d8%a7%d8%a8%d8%b9%d8%a7%d8%aa-%d8%ae%d8%a7%d8%b5%d8%a9/,Al Iraq,Iraq,Middle East,MENA,Arabic,,,h2
+https://www.almadapaper.net/newscat.php?cat=4&page=1,Al Mada,Iraq,Middle East,MENA,Arabic,,,a
+https://www.iraqinews.com/iraq/,Iraqi News,Iraq,Middle East,MENA,English,,,h3
+https://ina.iq/eng/politics/,Iraqi News Agency,Iraq,Middle East,MENA,English,,,#text
+https://shafaq.com/ar/%D8%A3%D9%85%D9%80%D9%86,SHAFAQ News,Iraq,Middle East,MENA,Arabic,,,#text
+https://www.alsumaria.tv/iraq-news/16/%D8%A3%D9%85%D9%86,Alsumaria,Iraq,Middle East,MENA,Arabic,,,font
+https://www.basnews.com/en/bash/77/0,Bas News,Iraq,Middle East,MENA,English,,,a
+https://baghdadtoday.news/category/4/%D8%A3%D9%85%D9%86?pageindex=1,Baghdad Today,Iraq,Middle East,MENA,Arabic,,,#text
+https://www.mawazin.net/section.aspx?cor=4&title=%D9%85%D8%AD%D9%84%D9%8A%D8%A9,Mawazin News,Iraq,Middle East,MENA,Arabic,,,font
+https://www.dijlah.tv/index.php?page=category&id=14,Dijlah,Iraq,Middle East,MENA,Arabic,,,font
+https://mangish.net/category/in/,Mangish,Iraq,Middle East,MENA,Arabic,,,font
+https://almasalah.com/ar/Archive/48/%D8%A7%D9%84%D8%B9%D8%B1%D8%A7%D9%82/1,Almasalah,Iraq,Middle East,MENA,Arabic,,,a
